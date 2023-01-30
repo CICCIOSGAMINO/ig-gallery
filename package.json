@@ -1,0 +1,38 @@
+{
+  "name": "ig-gallery",
+  "version": "0.0.1",
+  "description": "Instagram image / video gallery as WebComponent ready to use",
+  "main": "ig-gallery.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "dev": "wds --node-resolve --app-index examples/index.html --watch --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CICCIOSGAMINO/ig-gallery.git"
+  },
+  "keywords": [
+    "instagram",
+    "meta",
+    "webcomponent",
+    "customelement",
+    "media",
+    "image",
+    "video"
+  ],
+  "author": "@cicciosgamino",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/CICCIOSGAMINO/ig-gallery/issues"
+  },
+  "homepage": "https://github.com/CICCIOSGAMINO/ig-gallery#readme",
+  "dependencies": {
+    "lit": "^2.6.1"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.1.35"
+  }
+}

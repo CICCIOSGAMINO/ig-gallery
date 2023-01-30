@@ -1,0 +1,124 @@
+<!-- twitter / ig @cicciosgamino
+
+   _______           _                                  _
+  / ____(_)_________(_)___  _________ _____ _____ ___  (_)___  ____
+ / /   / / ___/ ___/ / __ \/ ___/ __ `/ __ `/ __ `__ \/ / __ \/ __ \
+/ /___/ / /__/ /__/ / /_/ (__  ) /_/ / /_/ / / / / / / / / / / /_/ /
+\____/_/\___/\___/_/\____/____/\__, /\__,_/_/ /_/ /_/_/_/ /_/\____/
+                              /____/
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title>ig-gallery - example</title>
+    <meta name="description" content="Lite WebApp Template">
+
+    <meta name="author" content="@cicciosgamino"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <style>
+
+      :root {
+        --surface1: whitesmoke;
+        --text1: #333;
+      }
+
+      * {
+        /* reset browser defaults */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+
+        /* block-size: 100%; */
+        min-block-size: 100vh;
+
+        /* base rem unit (10px) */
+        font-size: 62.5%;
+
+        background-color: var(--surface1);
+        color: var(--text1);
+      }
+
+
+      body  {
+        min-block-size: 100%;
+        
+        font-family: system-ui, sans-serif;
+        font-size: 1.9rem;
+        /* WCAG no less than 1.5 dyslexic */
+        line-height: 1.5;
+
+        display: grid;
+        place-content: center;
+        gap: 5rem;
+      }
+
+      main {
+        min-inline-size: 100%;
+        min-block-size: 50%;
+
+        background-color: whitesmoke;
+      }
+
+      ig-gallery {
+        --n-columns: 5;
+        --n-rows: 2;
+
+        --caption-bk-color: rgba(255, 255, 255, 0.15);
+        --caption-color: whitesmoke;
+        --caption-font-family: 'sans-serif';
+        --caption-font-size: 1.7rem;
+      }
+      
+    </style>
+    
+  </head>
+
+  <body>
+
+    <header>
+      <h1>🌠🏞 ig-gallery 🎑🌄</h1>
+    </header>
+
+    <main>
+      
+      <ig-gallery
+        items="9"
+        token=""
+      ></ig-gallery>
+
+    </main>
+
+    <noscript>
+      Please enable JavaScript to view this website.
+    </noscript>
+
+    <!-- Import Js Module -->
+    <script type="module" src="../ig-gallery.js"></script>
+
+    <script type="module">
+
+      import { igToken } from '../config/meta.js'
+
+      window.addEventListener('DOMContentLoaded', (e) => {
+
+        // DOM ready
+        console.log('@DOM >> Ready')
+
+        // instagram token igToken - imported from not versioned file
+        const igGallery = document.querySelector('ig-gallery')
+        igGallery.setAttribute('token', igToken)
+
+      })
+
+    </script>
+
+  </body>
+</html>
